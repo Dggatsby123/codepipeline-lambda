@@ -11,7 +11,7 @@ Resources:
       Description: ''
       MemorySize: 1024
       Timeout: 60
-      Role: 'arn:aws:iam::381144527382:role/LambdaS3FullAccess'
+      Role: 'arn:aws:iam::328477445978:role/admin'
       Events:
         Schedule1:
           Type: Schedule
