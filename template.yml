@@ -11,7 +11,7 @@ Resources:
       Description: ''
       MemorySize: 1024
       Timeout: 60
-      Role: 'arn:aws:iam::328477445978:role/admin'
+      Role: "arn:aws:iam::328477445978:role/LambdaS3FullAccess"
       Events:
         Schedule1:
           Type: Schedule
@@ -31,23 +31,3 @@ Resources:
             https://services.arcgis.com/5T5nSi527N4F7luB/arcgis/rest/services/COVID19_hist_cases_adm0_v5_view/FeatureServer/0/query?outFields=*&where=1%3D1&f=json
       Layers:
         - 'arn:aws:lambda:us-east-1:328477445978:layer:pandas-xlrd:1'
-
-
-
-
-# AWSTemplateFormatVersion: '2010-09-09'
-# Transform: AWS::Serverless-2016-10-31
-# Description: Outputs the time
-# Resources:
-#   TimeFunction:
-#     Type: AWS::Serverless::Function
-#     Properties:
-#       Handler: index.handler
-#       Runtime: nodejs10.x
-#       CodeUri: ./
-#       Events:
-#         MyTimeApi:
-#           Type: Api
-#           Properties:
-#             Path: /TimeResource
-#             Method: GET
